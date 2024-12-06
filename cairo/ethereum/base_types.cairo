@@ -73,8 +73,7 @@ struct TupleBytes {
     value: TupleBytesStruct*,
 }
 
-// Just a lke regular DictAccess pointer, with keys and values to be interpreted as
-// Bytes pointers.
+// Just a like regular DictAccess pointer, with typed keys and values.
 struct BytesBytesDictAccess {
     key: Bytes,
     prev_value: Bytes,
@@ -88,6 +87,21 @@ struct MappingBytesBytesStruct {
 
 struct MappingBytesBytes {
     value: MappingBytesBytesStruct*,
+}
+
+struct BytesU256DictAccess {
+    key: Bytes,
+    prev_value: U256,
+    new_value: U256,
+}
+
+struct MappingBytesU256Struct {
+    dict_ptr_start: BytesU256DictAccess*,
+    dict_ptr: BytesU256DictAccess*,
+}
+
+struct MappingBytesU256 {
+    value: MappingBytesU256Struct*,
 }
 
 struct TupleMappingBytesBytesStruct {

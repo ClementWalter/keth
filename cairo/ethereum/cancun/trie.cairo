@@ -128,12 +128,6 @@ struct Node {
     value: NodeEnum*,
 }
 
-// struct TrieStruct {
-//     secured: bool,
-//     default: V,
-//     _data: Dict[K, V],
-// }
-
 func encode_internal_node{
     range_check_ptr, bitwise_ptr: BitwiseBuiltin*, keccak_ptr: KeccakBuiltin*
 }(node: InternalNode) -> Extended {

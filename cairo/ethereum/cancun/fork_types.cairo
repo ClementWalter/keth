@@ -29,3 +29,18 @@ struct AccountStruct {
 struct Account {
     value: AccountStruct*,
 }
+
+struct AddressAccountDictAccess {
+    key: Address,
+    prev_value: Account,
+    new_value: Account,
+}
+
+struct MappingAddressAccountStruct {
+    dict_ptr_start: AddressAccountDictAccess*,
+    dict_ptr: AddressAccountDictAccess*,
+}
+
+struct MappingAddressAccount {
+    value: MappingAddressAccountStruct*,
+}
