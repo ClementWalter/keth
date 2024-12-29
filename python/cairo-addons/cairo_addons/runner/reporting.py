@@ -6,7 +6,6 @@ from time import perf_counter
 from typing import Any, Callable, List, TypeVar, Union
 
 import polars as pl
-
 from tests.utils.coverage import CoverageFile
 
 logging.basicConfig(format="%(levelname)-8s %(message)s")

@@ -1,6 +1,3 @@
-from ethereum_types.numeric import Uint
-from hypothesis import assume, given
-
 from ethereum.cancun.blocks import Header
 from ethereum.cancun.fork import (
     GAS_LIMIT_ADJUSTMENT_FACTOR,
@@ -11,6 +8,9 @@ from ethereum.cancun.fork import (
 )
 from ethereum.cancun.transactions import Transaction
 from ethereum.exceptions import InvalidBlock
+from ethereum_types.numeric import Uint
+from hypothesis import assume, given
+
 from tests.utils.errors import cairo_error
 
 

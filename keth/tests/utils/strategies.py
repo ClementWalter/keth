@@ -5,12 +5,11 @@ from typing import ForwardRef, Sequence, TypeAlias, Union
 from unittest.mock import patch
 
 from eth_keys.datatypes import PrivateKey
+from ethereum.crypto.elliptic_curve import SECP256K1N
 from ethereum_types.bytes import Bytes0, Bytes8, Bytes20, Bytes32, Bytes256
 from ethereum_types.numeric import U64, U256, FixedUnsigned, Uint
 from hypothesis import strategies as st
 from starkware.cairo.lang.cairo_constants import DEFAULT_PRIME
-
-from ethereum.crypto.elliptic_curve import SECP256K1N
 
 # Mock the Extended type because hypothesis cannot handle the RLP Protocol
 # Needs to be done before importing the types from ethereum.cancun.trie

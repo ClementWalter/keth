@@ -1,14 +1,6 @@
 from typing import Annotated, Any, Mapping, Optional, Set, Tuple, Type, Union
 
 import pytest
-from ethereum_types.bytes import Bytes, Bytes0, Bytes8, Bytes20, Bytes32, Bytes256
-from ethereum_types.numeric import U64, U256, Uint
-from hypothesis import assume, given, settings
-from starkware.cairo.common.dict import DictManager
-from starkware.cairo.lang.cairo_constants import DEFAULT_PRIME
-from starkware.cairo.lang.vm.memory_dict import MemoryDict
-from starkware.cairo.lang.vm.memory_segments import MemorySegmentManager
-
 from ethereum.cancun.blocks import Header, Log, Receipt, Withdrawal
 from ethereum.cancun.fork_types import Account, Address, Bloom, Root, VersionedHash
 from ethereum.cancun.transactions import (
@@ -21,6 +13,14 @@ from ethereum.cancun.transactions import (
 from ethereum.cancun.trie import BranchNode, ExtensionNode, InternalNode, LeafNode, Node
 from ethereum.cancun.vm.gas import MessageCallGas
 from ethereum.exceptions import EthereumException
+from ethereum_types.bytes import Bytes, Bytes0, Bytes8, Bytes20, Bytes32, Bytes256
+from ethereum_types.numeric import U64, U256, Uint
+from hypothesis import assume, given, settings
+from starkware.cairo.common.dict import DictManager
+from starkware.cairo.lang.cairo_constants import DEFAULT_PRIME
+from starkware.cairo.lang.vm.memory_dict import MemoryDict
+from starkware.cairo.lang.vm.memory_segments import MemorySegmentManager
+
 from tests.utils.args_gen import _cairo_struct_to_python_type
 from tests.utils.args_gen import gen_arg as _gen_arg
 from tests.utils.args_gen import to_cairo_type as _to_cairo_type

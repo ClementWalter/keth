@@ -1,10 +1,6 @@
 from typing import Sequence, Tuple, Union
 
 import pytest
-from ethereum_types.bytes import Bytes, Bytes0, Bytes32
-from ethereum_types.numeric import U256, Uint
-from hypothesis import assume, given
-
 from ethereum.cancun.blocks import Log, Receipt, Withdrawal
 from ethereum.cancun.fork_types import Account, Address, Bloom, encode_account
 from ethereum.cancun.transactions import LegacyTransaction
@@ -21,6 +17,10 @@ from ethereum.rlp import (
     get_joined_encodings,
     rlp_hash,
 )
+from ethereum_types.bytes import Bytes, Bytes0, Bytes32
+from ethereum_types.numeric import U256, Uint
+from hypothesis import assume, given
+
 from tests.utils.errors import cairo_error
 
 

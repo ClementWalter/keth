@@ -1,13 +1,12 @@
 from pathlib import Path
 
+from cairo_addons.compiler.constants import CHAIN_ID
 from starkware.cairo.lang.cairo_constants import DEFAULT_PRIME
 from starkware.cairo.lang.compiler.cairo_compile import compile_cairo, get_module_reader
 from starkware.cairo.lang.compiler.preprocessor.default_pass_manager import (
     default_pass_manager,
 )
 from starkware.cairo.lang.compiler.program import CairoHint
-
-from cairo_addons.compiler.constants import CHAIN_ID
 
 dict_manager = """
 if '__dict_manager' not in globals():

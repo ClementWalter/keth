@@ -1,11 +1,6 @@
 from typing import Mapping, Optional
 
 import pytest
-from ethereum_types.bytes import Bytes
-from ethereum_types.numeric import Uint
-from hypothesis import assume, given
-from hypothesis import strategies as st
-
 from ethereum.cancun.fork_types import Account
 from ethereum.cancun.trie import (
     InternalNode,
@@ -17,6 +12,11 @@ from ethereum.cancun.trie import (
     nibble_list_to_compact,
     patricialize,
 )
+from ethereum_types.bytes import Bytes
+from ethereum_types.numeric import Uint
+from hypothesis import assume, given
+from hypothesis import strategies as st
+
 from tests.utils.assertion import sequence_equal
 from tests.utils.errors import cairo_error
 from tests.utils.hints import patch_hint

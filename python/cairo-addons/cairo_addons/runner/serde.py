@@ -36,6 +36,7 @@ from typing import (
 )
 
 from eth_utils.address import to_checksum_address
+from ethereum.crypto.hash import Hash32
 from ethereum_types.bytes import Bytes, Bytes0, Bytes8, Bytes20, Bytes32, Bytes256
 from ethereum_types.numeric import U256
 from starkware.cairo.lang.compiler.ast.cairo_types import (
@@ -53,8 +54,6 @@ from starkware.cairo.lang.compiler.identifier_definition import (
 from starkware.cairo.lang.compiler.identifier_manager import MissingIdentifierError
 from starkware.cairo.lang.compiler.scoped_name import ScopedName
 from starkware.cairo.lang.vm.memory_segments import MemorySegmentManager
-
-from ethereum.crypto.hash import Hash32
 from tests.utils.args_gen import to_python_type
 
 # Sentinel object for indicating no error in exception handling
