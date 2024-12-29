@@ -69,6 +69,20 @@ from typing import (
     get_origin,
 )
 
+from ethereum.cancun.blocks import Header, Log, Receipt, Withdrawal
+from ethereum.cancun.fork_types import Account, Address, Bloom, Root, VersionedHash
+from ethereum.cancun.transactions import (
+    AccessListTransaction,
+    BlobTransaction,
+    FeeMarketTransaction,
+    LegacyTransaction,
+    Transaction,
+)
+from ethereum.cancun.trie import BranchNode, ExtensionNode, InternalNode, LeafNode, Node
+from ethereum.cancun.vm.gas import MessageCallGas
+from ethereum.crypto.hash import Hash32
+from ethereum.exceptions import EthereumException
+from ethereum.rlp import Extended, Simple
 from ethereum_types.bytes import Bytes, Bytes0, Bytes8, Bytes20, Bytes32, Bytes256
 from ethereum_types.numeric import U64, U256, Uint
 from starkware.cairo.common.dict import DictManager, DictTracker
@@ -86,21 +100,6 @@ from starkware.cairo.lang.compiler.program import Program
 from starkware.cairo.lang.compiler.scoped_name import ScopedName
 from starkware.cairo.lang.vm.memory_segments import MemorySegmentManager
 from starkware.cairo.lang.vm.relocatable import MaybeRelocatable, RelocatableValue
-
-from ethereum.cancun.blocks import Header, Log, Receipt, Withdrawal
-from ethereum.cancun.fork_types import Account, Address, Bloom, Root, VersionedHash
-from ethereum.cancun.transactions import (
-    AccessListTransaction,
-    BlobTransaction,
-    FeeMarketTransaction,
-    LegacyTransaction,
-    Transaction,
-)
-from ethereum.cancun.trie import BranchNode, ExtensionNode, InternalNode, LeafNode, Node
-from ethereum.cancun.vm.gas import MessageCallGas
-from ethereum.crypto.hash import Hash32
-from ethereum.exceptions import EthereumException
-from ethereum.rlp import Extended, Simple
 from tests.utils.helpers import flatten
 
 _cairo_struct_to_python_type: Dict[Tuple[str, ...], Any] = {

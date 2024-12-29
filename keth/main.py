@@ -3,7 +3,7 @@ import json
 import logging
 from pathlib import Path
 
-from src.utils.compiler import cairo_compile, implement_hints
+from compiler import cairo_compile, implement_hints
 
 # Configure the logger
 logging.basicConfig(

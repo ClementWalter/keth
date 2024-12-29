@@ -15,9 +15,8 @@ import logging
 from pathlib import Path
 from time import perf_counter
 
+from compiler import cairo_compile, implement_hints
 from starkware.cairo.lang.compiler.scoped_name import ScopedName
-
-from src.utils.compiler import cairo_compile, implement_hints
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"

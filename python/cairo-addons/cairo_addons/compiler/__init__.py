@@ -7,7 +7,7 @@ from starkware.cairo.lang.compiler.preprocessor.default_pass_manager import (
 )
 from starkware.cairo.lang.compiler.program import CairoHint
 
-from src.utils.constants import CHAIN_ID
+from cairo_addons.compiler.constants import CHAIN_ID
 
 dict_manager = """
 if '__dict_manager' not in globals():
