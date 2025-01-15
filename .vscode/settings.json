@@ -19,6 +19,7 @@
     "frozendict",
     "fspaths",
     "getattr",
+    "hashdict",
     "hookwrapper",
     "intdigest",
     "ipykernel",
@@ -68,6 +69,6 @@
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "jupyter.notebookFileRoot": "${workspaceFolder}/cairo",
-  "githubPullRequests.remotes": ["kakarot", "upstream"],
+  "githubPullRequests.remotes": ["kakarot"],
   "cairols.sourceDir": "cairo"
 }

@@ -21,6 +21,8 @@ cairo-vm = { workspace = true }
 num-traits = "0.2.18"
 num-bigint = "0.4.6"
 starknet-crypto = "0.7.4"
+lazy_static = "1.4.0"
+serde_json = "1.0"
 
 [build-dependencies]
 pyo3-build-config = "0.22.4" # Should match pyo3 version

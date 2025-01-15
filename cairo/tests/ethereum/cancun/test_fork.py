@@ -1,6 +1,6 @@
 import pytest
 from ethereum_types.numeric import Uint
-from hypothesis import assume, given
+from hypothesis import assume, given, reproduce_failure
 
 from ethereum.cancun.blocks import Header
 from ethereum.cancun.fork import (
@@ -18,6 +18,7 @@ pytestmark = pytest.mark.python_vm
 
 
 class TestFork:
+    @reproduce_failure("6.122.3", b"AXicY2AgHgAAACwAAQ==")
     @given(
         block_gas_limit=...,
         parent_gas_limit=...,
